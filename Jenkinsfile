@@ -37,8 +37,9 @@ pipeline {
             steps {
                 sh 'echo "${JQ}"'
                 sh 'echo "AWS region=${AWS_DEFAULT_REGION}"'
-                sh 'make clean DISTRIBUTION=ubuntu'
-                sh 'make build DISTRIBUTION=ubuntu'
+                sh 'echo KEY-->${AWS_ACCESS_KEY_ID}'
+                sh 'echo KEY-->${AWS_ACCESS_KEY_ID}'
+                sh 'env'
             }
         }
     }
